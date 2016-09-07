@@ -17,6 +17,6 @@ end
 require 'rspec'
 RSpec.configure do |config|
   config.before do
-    allow(Toiler).to receive(:worker_class_registry).and_return({'default' => TestWorker})
+    Toiler.worker_class_registry = {'default' => TestWorker}
   end
 end

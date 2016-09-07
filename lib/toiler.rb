@@ -52,4 +52,8 @@ module Toiler
       batch: false
     }
   end
+
+  def worker_class_registry=(val)
+    @worker_class_registry = val
+  end
 end
